@@ -34,6 +34,7 @@ _Imagen 1: Tipos de Daltonismo Dicromático(2)_
 Teniendo en cuenta lo anterior para lograr una aplicación accesible a personas con algún tipo de ceguera al color, debemos tener en cuenta que podemos realizar distintos tipos de abordaje. Podemos cambiar las imágenes píxel por píxel o aplicar algún tipo de filtro, así, facilitar la diferenciación de colores o cambiar el color que no es detectado por uno dentro del espectro percibible.
 
 Si tenemos pensado cambiar el color afectado por otro debemos tener en cuenta que hay un conjunto de combinaciones de colores que deben evitarse, ya que puede ser difícil para una persona ciega del color diferenciarlas:
+
 |||||
 |----|-----|----|-----|
 |rojo y verde|rojo y marrón|rojo y naranja|rojo y violeta|
@@ -53,11 +54,12 @@ Para esta solución se hizo uso de la propiedad _blend mode_ que ofrece _Flutter
 
 _Tabla 4: Blend modes usados en la solución propuesta (4)_
 
-REFERENCIAS
+### REFERENCIAS
+
 1. [Daltonismo: MedlinePlus enciclopedia médica](https://medlineplus.gov/spanish/ency/article/001002.htm)
 
 2. [Daltonismo - Clínica Rementería](http://www.clinicarementeria.es/patologias/daltonismo)
 
-3.[Creating Graphic Design and Illustration for Color Blind People](https://design.tutsplus.com/articles/design-and-illustration-for-the-color-blind--cms-30201)
+3. [Creating Graphic Design and Illustration for Color Blind People](https://design.tutsplus.com/articles/design-and-illustration-for-the-color-blind--cms-30201)
 
-4.[ BlendMode enum - dart:ui library - Dart API](https://docs.flutter.io/flutter/dart-ui/BlendMode-class.html)
+4. [ BlendMode enum - dart:ui library - Dart API](https://docs.flutter.io/flutter/dart-ui/BlendMode-class.html)
