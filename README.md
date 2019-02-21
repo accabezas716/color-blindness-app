@@ -34,8 +34,8 @@ _Imagen 1: Tipos de Daltonismo Dicromático(2)_
 Teniendo en cuenta lo anterior para lograr una aplicación accesible a personas con algún tipo de ceguera al color, debemos tener en cuenta que podemos realizar distintos tipos de abordaje. Podemos cambiar las imágenes píxel por píxel o aplicar algún tipo de filtro, así, facilitar la diferenciación de colores o cambiar el color que no es detectado por uno dentro del espectro percibible.
 
 Si tenemos pensado cambiar el color afectado por otro debemos tener en cuenta que hay un conjunto de combinaciones de colores que deben evitarse, ya que puede ser difícil para una persona ciega del color diferenciarlas:
-||||
-|----|-----|----|
+|||||
+|----|-----|----|-----|
 |rojo y verde|rojo y marrón|rojo y naranja|rojo y violeta|
 |rojo y negro|verde y marrón|verde y naranja|verde claro y amarillo|
 |azul y verde|azul y morado|azul y amarillo|
@@ -45,10 +45,11 @@ _Tabla 3: Combinaciones de colores óptimas(3)_
 ### Solución propuesta
 El problema generalmente surge cuando un diseño se basa en colores que tienen niveles de matiz, saturación o brillo cercanos, haciéndolos parecer sombras del mismo color (3). De aquí, que la segunda opción es modificar estos valores para acercarlos a un color vivible del espectro.
 Para esta solución se hizo uso de la propiedad _blend mode_ que ofrece _Flutter_ en widgets de tipo imagen. En consecuencia, se crearon dos tipos de filtros, usando como color de fuente los tipos de pigmentos de los conos. Posteriormente se aplicaron dos _blend modes_ para modificar el matiz y la saturación.
+
 |Blend mode|Descripción|
 |----------------|-----------------|
-|**saturation**| Toma la saturación de la imagen de origen y el tono y la luminosidad de la imagen de destino. |
-|**hue**| Toma el tono de la imagen de origen y la saturación y luminosidad de la imagen de destino. El efecto es teñir la imagen de destino con la imagen de origen.|
+|**saturation**|Toma la saturación de la imagen de origen y el tono y la luminosidad de la imagen de destino.|
+|**hue**|Toma el tono de la imagen de origen y la saturación y luminosidad de la imagen de destino. El efecto es teñir la imagen de destino con la imagen de origen.|
 
 _Tabla 4: Blend modes usados en la solución propuesta (4)_
 
