@@ -176,7 +176,7 @@ class _ImageScreenState extends State<ImageScreen> {
     if (loadedImage == null) {
       loadedWidget = Text('No image to show');
     } else {
-      state = (state + 1) % 5;
+      state = (state + 1) % 7;
       switch (state) {
         case 0:
           this.setState(() {
@@ -196,8 +196,8 @@ class _ImageScreenState extends State<ImageScreen> {
           this.setState(() {
             loadedWidget = Image.file(
               loadedImage,
-              color: Colors.green,
-              colorBlendMode: BlendMode.saturation,
+              color: Colors.green[900],
+              colorBlendMode: BlendMode.hue,
             );
           });
           break;
@@ -206,7 +206,7 @@ class _ImageScreenState extends State<ImageScreen> {
             loadedWidget = Image.file(
               loadedImage,
               color: Colors.blue[900],
-              colorBlendMode: BlendMode.exclusion,
+              colorBlendMode: BlendMode.hue,
             );
           });
           break;
@@ -214,8 +214,26 @@ class _ImageScreenState extends State<ImageScreen> {
           this.setState(() {
             loadedWidget = Image.file(
               loadedImage,
-              color: Colors.black,
-              colorBlendMode: BlendMode.color,
+              color: Colors.red[900],
+              colorBlendMode: BlendMode.saturation,
+            );
+          });
+          break;
+        case 5:
+          this.setState(() {
+            loadedWidget = Image.file(
+              loadedImage,
+              color: Colors.green[900],
+              colorBlendMode: BlendMode.saturation,
+            );
+          });
+          break;
+        case 6:
+          this.setState(() {
+            loadedWidget = Image.file(
+              loadedImage,
+              color: Colors.blue[900],
+              colorBlendMode: BlendMode.saturation,
             );
           });
           break;
